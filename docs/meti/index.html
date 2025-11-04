@@ -13,7 +13,8 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f5;
+            background: #0f172a;
+            color: #e2e8f0;
             padding: 2rem;
             line-height: 1.6;
         }
@@ -21,26 +22,26 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
+            background: #1e293b;
             padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
         header {
-            border-bottom: 2px solid #667eea;
+            border-bottom: 2px solid #3b82f6;
             padding-bottom: 2rem;
             margin-bottom: 2rem;
         }
 
         h1 {
-            color: #667eea;
+            color: #60a5fa;
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
 
         .meta {
-            color: #666;
+            color: #94a3b8;
             font-size: 0.9rem;
         }
 
@@ -49,74 +50,120 @@
         }
 
         .categoria {
-            background: #f0f0f0;
-            padding: 0.5rem 1rem;
+            background: #334155;
+            padding: 0.75rem 1.5rem;
             font-weight: bold;
-            margin-top: 1.5rem;
-            border-left: 4px solid #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+            color: #60a5fa;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
         }
 
         .item {
-            display: grid;
-            grid-template-columns: 1fr auto auto auto;
-            gap: 1rem;
-            padding: 1rem;
-            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #334155;
+            transition: background 0.2s;
+        }
+
+        .item:hover {
+            background: #27374d;
+        }
+
+        .item-content {
+            flex: 1;
         }
 
         .item-nome {
             font-weight: 500;
+            font-size: 1.05rem;
+            color: #f1f5f9;
+            margin-bottom: 0.25rem;
         }
 
         .item-desc {
-            color: #666;
+            color: #94a3b8;
             font-size: 0.9rem;
-            grid-column: 1 / -1;
-            margin-top: 0.25rem;
+        }
+
+        .item-prezzo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #60a5fa;
+            white-space: nowrap;
+            margin-left: 2rem;
         }
 
         .totale {
-            background: #fef3c7;
-            padding: 1.5rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 2rem;
             margin-top: 2rem;
-            border-radius: 4px;
+            border-radius: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
         }
 
         .note {
             margin-top: 2rem;
-            padding: 1rem;
-            background: #f9f9f9;
+            padding: 1.5rem;
+            background: #334155;
             border-left: 4px solid #fbbf24;
+            border-radius: 4px;
             font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .note strong {
+            color: #fbbf24;
         }
 
         .note ul {
             margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .note li {
+            margin-bottom: 0.25rem;
         }
 
         footer {
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #334155;
             text-align: center;
-            color: #666;
+            color: #64748b;
             font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: #94a3b8;
         }
 
         @media print {
             body {
                 background: white;
+                color: black;
                 padding: 0;
             }
             .container {
+                background: white;
                 box-shadow: none;
                 padding: 1rem;
             }
+            h1 { color: #1e40af; }
+            .categoria { background: #e0e7ff; color: #1e40af; }
+            .item:hover { background: transparent; }
+            .item-prezzo { color: #1e40af; }
+            .totale { background: #dbeafe; color: #1e40af; }
         }
     </style>
 </head>
@@ -133,41 +180,35 @@
         <section class="attivita">
             <div class="categoria">Infrastruttura</div>
             <div class="item">
-                <div>
+                <div class="item-content">
                     <div class="item-nome">Setup WordPress</div>
                     <div class="item-desc">Installazione WordPress + tema custom</div>
                 </div>
-                <div>8 ore</div>
-                <div>€60/h</div>
-                <div><strong>€480</strong></div>
+                <div class="item-prezzo">€480</div>
             </div>
 
             <div class="categoria">Design</div>
             <div class="item">
-                <div>
+                <div class="item-content">
                     <div class="item-nome">Design personalizzato</div>
                     <div class="item-desc">Homepage + 3 pagine interne</div>
                 </div>
-                <div>16 ore</div>
-                <div>€60/h</div>
-                <div><strong>€960</strong></div>
+                <div class="item-prezzo">€960</div>
             </div>
 
             <div class="categoria">Contenuti</div>
             <div class="item">
-                <div>
+                <div class="item-content">
                     <div class="item-nome">Integrazione contenuti</div>
                     <div class="item-desc">Caricamento contenuti e immagini</div>
                 </div>
-                <div>6 ore</div>
-                <div>€60/h</div>
-                <div><strong>€360</strong></div>
+                <div class="item-prezzo">€360</div>
             </div>
         </section>
 
         <div class="totale">
             <span>TOTALE</span>
-            <span>30 ore - €1.800</span>
+            <span>€1.800</span>
         </div>
 
         <div class="note">
