@@ -1,0 +1,50 @@
+{
+  "preventivo": {
+    "id": "2025-001",
+    "cliente_slug": "meti",
+    "cliente_nome": "Meti Srl",
+    "progetto": "Sito Web Corporate",
+    "scenario": "A",
+    "data_creazione": "2025-11-04",
+    "valido_fino": "2025-12-04",
+    "stato": "bozza",
+
+    "attivita": [
+      {
+        "nome": "Setup WordPress",
+        "descrizione": "Installazione WordPress + tema custom",
+        "quantita": 8,
+        "unita": "ore",
+        "prezzo_unitario": 60,
+        "totale": 480,
+        "categoria": "infrastruttura"
+      },
+      {
+        "nome": "Design personalizzato",
+        "descrizione": "Homepage + 3 pagine interne",
+        "quantita": 16,
+        "unita": "ore",
+        "prezzo_unitario": 60,
+        "totale": 960,
+        "categoria": "design"
+      },
+      {
+        "nome": "Integrazione contenuti",
+        "descrizione": "Caricamento contenuti e immagini",
+        "quantita": 6,
+        "unita": "ore",
+        "prezzo_unitario": 60,
+        "totale": 360,
+        "categoria": "contenuti"
+      }
+    ],
+
+    "totale_ore": 30,
+    "totale_importo": 1800,
+
+    "note": [
+      "Hosting non incluso (circa €120/anno)",
+      "Manutenzione mensile: €200/mese (opzionale)"
+    ]
+  }
+}
